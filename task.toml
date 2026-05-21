@@ -1,0 +1,24 @@
+schema_version = "1.1"
+
+[task]
+name = "demo/jwt-session-timezone-bug"
+description = "Fix intermittent JWT authentication failures caused by timezone handling."
+keywords = ["python", "jwt", "fastapi", "debugging", "auth"]
+
+[metadata]
+category = "backend-debugging"
+difficulty_explanation = "Subtle timezone bug in JWT validation logic."
+
+[environment]
+build_timeout_sec = 300
+os = "linux"
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048
+allow_internet = false
+
+[agent]
+timeout_sec = 300
+
+[verifier]
+timeout_sec = 300
