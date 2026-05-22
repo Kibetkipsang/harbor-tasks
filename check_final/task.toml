@@ -1,10 +1,5 @@
 schema_version = "1.1"
 
-# REQUIRED TOP-LEVEL FIELDS
-author_name = "Kibet Kipsang"
-author_email = "kibetkipsang@example.com"
-difficulty = "medium"
-
 [task]
 name = "demo/jwt-session-timezone-bug"
 description = "Fix intermittent JWT authentication failures caused by timezone handling."
