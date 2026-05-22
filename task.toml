@@ -1,9 +1,9 @@
 schema_version = "1.1"
 
-# REQUIRED TOP-LEVEL FIELDS
 author_name = "Kibet Kipsang"
-author_email = "kibetkipsang@example.com"
+author_email = "oohmycode@gmail.com"
 difficulty = "medium"
+tags = ["python", "jwt", "auth", "debugging", "timezone"]
 
 [task]
 name = "demo/jwt-session-timezone-bug"
