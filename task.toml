@@ -2,17 +2,25 @@ schema_version = "1.1"
 
 author_name = "Kibet Kipsang"
 author_email = "oohmycode@gmail.com"
+
 difficulty = "medium"
-tags = ["python", "jwt", "auth", "debugging", "timezone"]
+
+difficulty_explanation = "The bug is subtle because JWT expiration timestamps appear valid, but timezone conversion causes intermittent authentication failures."
+
+solution_explanation = "The fix requires replacing local timestamp conversion with UTC-aware timestamp handling during JWT validation."
+
+verification_explanation = "Tests verify token generation, repeated validation, payload consistency, and correct authentication behavior before and after applying the fix."
+
+category = "backend-debugging"
+
+tags = ["python", "jwt", "fastapi", "authentication", "timezone", "debugging"]
+
+expert_time_estimate_hours = 1
 
 [task]
 name = "demo/jwt-session-timezone-bug"
 description = "Fix intermittent JWT authentication failures caused by timezone handling."
 keywords = ["python", "jwt", "fastapi", "debugging", "auth"]
-
-[metadata]
-category = "backend-debugging"
-difficulty_explanation = "Subtle timezone bug in JWT validation logic."
 
 [environment]
 build_timeout_sec = 300
@@ -20,7 +28,7 @@ os = "linux"
 cpus = 1
 memory_mb = 1024
 storage_mb = 2048
-allow_internet = false
+allow_internet = true
 
 [agent]
 timeout_sec = 300
