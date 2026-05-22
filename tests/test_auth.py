@@ -38,3 +38,7 @@ def test_consistency():
     p1 = verify_token(token)
     p2 = verify_token(token)
     assert p1 == p2
+
+def test_token_is_string():
+    token = generate_token("frank")
+    assert isinstance(token, str)
